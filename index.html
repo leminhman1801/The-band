@@ -44,23 +44,27 @@
 
         <div id="slider">
             
-            <!-- <div class="text-content"> -->
+            <div class="slider-content">
                 <img src="/assets/css/Img/slider1.jpg" alt="" class="slider-img">
                 <div class="text-desc-border">
                     
                     <h2 class="text-heading">Los Angeles</h2>  
                     <div class="text-description">We had the best time playing at Venice Beach!</div>   
-              
-                <!-- <div class="slide">
-                    <img src="/assets/css/Img/slider2.jpg" alt="">
                 </div>
-                <div class="slide">
-                    <img src="/assets/css/Img/slider3.jpg" alt="">
-                </div> -->
-                </div>  
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
+               
+                <img src="/assets/css/Img/slider2.jpg" alt="">
+                    <h2 class="text-heading">Los Angeles</h2>  
+                    <div class="text-description">We had the best time playing at Venice Beach!</div> 
+                
+                <img src="/assets/css/Img/slider3.jpg" alt="">
+                
+                
+                
+                <div class="radio-container">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                </div>
             </div>
         </div>
 
@@ -219,10 +223,11 @@
         </div>
     </div>
     <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket s-full-width')
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.js-modal')
         const modalContainer = document.querySelector ('.js-modal-container')
         const modalClose = document.querySelector('.js-modal-close')
+        console.log("Hello world!");
 
         // Hàm hiển thị modal mua vé ( thêm class open vào modal)
         function showBuyTickets() {
@@ -236,6 +241,7 @@
         // Lặp qua từng thẻ button và nghe hành vi click 
         for ( const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuyTickets)
+            console.log("Hello!");
 
         }
         // Nghe hành vi click vào button close  

@@ -189,20 +189,21 @@ html {
 #radio1, #radio2, #radio3 {
      /* width: calc(100%/3);  */
     /* text-align:center;  */
-    bottom: 16px; 
+    /* bottom: 16px;  */
     /* left:50%; */
-    position: absolute;
+    /* position: absolute; */
     /* display: inline-block; */
+    margin: 0 8px;
       
 }
-#radio1 {
-    left: 45%;
-}
-#radio2 {
-    left: 50%;
-}
-#radio3 {
-    left: 55%;
+.radio-container {
+    position: absolute;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    bottom: 16px;
+    
 }
 #slider {
     position: relative;
@@ -225,7 +226,7 @@ html {
     
 
 }   
-#slider .text-content {
+#slider .slider-content {
     /* width: 100%; */
     /* position: absolute; */
     /* bottom: 47px; */
