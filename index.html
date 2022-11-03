@@ -43,31 +43,40 @@
         </div>
 
         <div id="slider">
-            <div class="slider-content" id="slider-no1">
-                <img src="./assets/css/Img/slider1.jpg" alt="" class="slider-img">
-                <div class="text-desc-border">
-                    <h2 class="text-heading">Los Angeles</h2>  
-                    <div class="text-description">We had the best time playing at Venice Beach!</div>   
+            <div class="slider-container">
+                <div class="slider-content" id="slider-no1">
+                    <img src="./assets/css/Img/slider1.jpg" alt="radio1" class="slider-img img1">
+                    <div class="text-desc-border">
+                        <h2 class="text-heading">Los Angeles</h2>  
+                        <div class="text-description">We had the best time playing at Venice Beach!</div>   
+                    </div>
                 </div>
-            </div>
-            <div class="slider-content" id="slider-no2">
-                <img src="./assets/css/Img/slider2.jpg" alt="" class="slider-img">
-                <div class="text-desc-border">
-                    <h2 class="text-heading">Los Angeles</h2>  
-                    <div class="text-description">We had the best time playing at Venice Beach!</div> 
+                <div class="slider-content" id="slider-no2">
+                    <img src="./assets/css/Img/slider2.jpg" alt="radio2" class="slider-img img2">
+                    <div class="text-desc-border">
+                        <h2 class="text-heading">Los Angeles</h2>  
+                        <div class="text-description">We had the best time playing at Venice Beach!</div> 
+                    </div>
                 </div>
-            </div>
-            <div class="slider-content" id="slider-no3">
-                <img src="./assets/css/Img/slider3.jpg" alt="" class="slider-img">
-                <div class="text-desc-border">
-                    <h2 class="text-heading">Los Angeles</h2>  
-                    <div class="text-description">We had the best time playing at Venice Beach!</div> 
+                <div class="slider-content" id="slider-no3">
+                    <img src="./assets/css/Img/slider3.jpg" alt="radio3" class="slider-img img3">
+                    <div class="text-desc-border">
+                        <h2 class="text-heading">Los Angeles</h2>  
+                        <div class="text-description">We had the best time playing at Venice Beach!</div> 
+                    </div>
                 </div>
+                <div class="radio-container">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                </div>
+                
             </div>
-            <div class="radio-container">
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
+            <div class="labelslider">
+                <label for="radio1"></label>
+                <label for="radio2"></label>
+                <label for="radio3"></label>
+
             </div>
         </div>
 
@@ -225,6 +234,17 @@
             </footer>
         </div>
     </div>
+    <script>
+        var counter = 1
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++
+            if (counter > 3){
+                counter = 1;
+
+            }
+        }, 5000);
+    </script>
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.js-modal')

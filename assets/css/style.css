@@ -179,13 +179,23 @@ html {
     font-size: 14px;
 }
 /* Slider  */
-/* #radio1 {
-    margin-left: calc( 100%/3);
-}
-#radio2 {
-    margin-left: calc( 100%/3);
 
-} */
+
+    /* Auto Slider */
+
+#radio1:checked ~.slider-no1 {
+    margin-left: -100%;
+}
+
+.labelslider {
+    display: flex;
+}
+.labelslider label{
+    border: 3px solid red;
+}
+.labelslider label:hover{
+    background: pink;
+}
 #radio1, #radio2, #radio3 {
      /* width: calc(100%/3);  */
     /* text-align:center;  */
@@ -193,17 +203,17 @@ html {
     /* left:50%; */
     /* position: absolute; */
     /* display: inline-block; */
-    margin: 0 8px;
+    display: none;
       
 }
 .radio-container {
     position: absolute;
     display: flex ;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    width: 100vw;
+    width: calc(100%/3);
     bottom: 16px;
-    
+    /* left: calc(100%/6); */
 }
 #slider {
     position: relative;
@@ -213,21 +223,51 @@ html {
     padding-top: 50%;   
     /* background: url('.. /css/Img/slider1.jpg') top center/cover no-repeat; */
     /* width: 100%; */
+    overflow: hidden;
+ 
+}
+.labelslider {
+    justify-content: center;
+}
+.labelslider label{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+ 
 
 }
-
+#slider .slider-container {
+    top:0;
+    position: absolute;
+    width: 300%;;
+    height: 506.333333px;
+    display: flex;
+}
 #slider .slider-img {
     width: 100%;
     /* padding-top: 50%; */
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     top: 0;
-    /* display: block; */
-    
-
+    /* display: flex; */
+    /* float: left; */
+    /* #slider-content {
+    display: inline;
+} */
 }   
-#slider .slider-content {
-    /* width: 100%; */
+/* #slider-container #slider-no1 {
+    left:0;
+}
+#slider-container #slider-no2 {
+    left: calc(100%/3);
+
+}
+#slider-container #slider-no3 {
+    left: calc(200%/3);
+} */
+
+#slider .content {
+    width: 100%;
     /* position: absolute; */
     /* bottom: 47px; */
     /* color: #fff;    */
